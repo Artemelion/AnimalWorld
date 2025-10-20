@@ -6,11 +6,11 @@ using namespace std;
 
 class Bison : public IHerbivore
 {
-    int weight;
+    int  weight;
     bool alive;
 
 public:
-    Bison(int value = 500): weight(value), alive(true) {}
+    Bison(int startWeight = 500): weight(startWeight), alive(true) {}
 
     virtual string GetName() const
     {
@@ -22,9 +22,9 @@ public:
         return weight;
     }
 
-    virtual void SetWeight(int value)
+    virtual void SetWeight(int newWeight)
     {
-        weight = value;
+        weight = newWeight;
     }
 
     virtual bool IsAlive() const
@@ -32,9 +32,9 @@ public:
         return alive;
     }
 
-    virtual void SetAlive(bool value)
+    virtual void SetAlive(bool isAliveNow)
     {
-        alive = value;
+        alive = isAliveNow;
     }
 
     virtual void EatGrass()

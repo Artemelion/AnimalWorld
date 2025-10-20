@@ -10,7 +10,7 @@ class Lion : public ICarnivore
     int power;
 
 public:
-    Lion(int value = 200): power(value) {}
+    Lion(int startPower = 200) : power(startPower) {}
 
     virtual string GetName() const
     {
@@ -22,9 +22,9 @@ public:
         return power;
     }
 
-    virtual void SetPower(int value)
+    virtual void SetPower(int newPower)
     {
-        power = value;
+        power = newPower;
     }
 
     virtual void Eat(IHerbivore* prey)

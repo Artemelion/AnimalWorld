@@ -10,7 +10,7 @@ class Wolf : public ICarnivore
     int power;
 
 public:
-    Wolf(int value = 120): power(value) {}
+    Wolf(int startPower = 120): power(startPower) {}
 
     virtual string GetName() const
     {
@@ -22,9 +22,9 @@ public:
         return power;
     }
 
-    virtual void SetPower(int value)
+    virtual void SetPower(int newPower)
     {
-        power = value;
+        power = newPower;
     }
 
     virtual void Eat(IHerbivore* prey)
